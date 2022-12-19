@@ -1,0 +1,116 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lab SM</title>
+  <style>
+      body {
+          background-color: #2e74bf;
+          text-align: center;
+          font-family: Arial, sans-serif;
+          color: #ff0000;
+      }
+      
+      .h1_header {
+          width: 640px;
+          height: 50px;
+          margin: auto;
+          border-bottom: 2px solid white;
+          padding-bottom: 5px;
+          padding-top: 15px;
+      }
+      
+     .video {
+        padding-top: 15px;
+     }
+     
+     .panel-body {
+         padding-top: 10px;
+         height: 50px;
+     }
+     
+     .submitButton {
+    	box-shadow: 0px 10px 14px -7px #276873;
+    	background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+    	background-color: #11b535;
+    	border-radius: 8px;
+    	display: inline-block;
+    	cursor: pointer;
+    	color: #ff000071;
+    	font-family: Arial;
+    	font-size: 20px;
+    	padding: 13px 26px;
+    	text-decoration: none;
+    	border:0
+    }
+
+    .submitButton:hover {
+    	background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+    	background-color: #408c99;
+    }
+
+    .submitButton:active {
+    	position: relative;
+    	top: 1px;
+    }
+    
+    .textInput {
+         padding: 5px;
+         font-size: 16px;
+         border-width: 1px;
+         border-color: #CCCCCC;
+         background-color: #FFFFFF;
+         color: #000000;
+         border-style: solid;
+         border-radius: 0px;
+         box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+         text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+     }
+  </style>
+
+</head>
+
+<body>
+    <h1 class="h1_header"> Beautify your look in your own way! </h1>
+    <img class="video" src="{{ url_for('video_feed') }}" width="640px" height="480px">
+    
+    <form id="package_form" action="" method="post">
+        <div class="panel-body">
+          <input type="submit" class="submitButton" name="stopButton" value="Stop Stream">
+        </div>
+    </form>
+    
+    <form id="package_form" action="" method="post">
+        <div class="panel-body">
+          <input type="submit" class="submitButton" name="faceDetectionButton" value="Face detection">
+        </div>
+    </form>
+    
+    <form id="package_form" action="" method="post">
+        <div class="panel-body">
+          <input type="submit" class="submitButton" name="reducePixelsButton" value="Reduce pixels">
+        </div>
+    </form>
+    
+    <form id="package_form" action="" method="post">
+        <div class="panel-body">
+          <input type="submit" class="submitButton" name="blurringButton" value="Blurring">
+        </div>
+    </form>
+    
+    <form id="package_form" action="" method="post">
+        <div class="panel-body">
+          <input type="submit" class="submitButton" name="showIdolButton" value="Show your Idol">
+        </div>
+    </form>
+    
+    <form id="package_form" action="" method="post">
+        <div class="panel-body">
+          <input type="text" class="textInput" name="addTextInput" placeholder="Type here">
+          <input type="submit" class="submitButton" name="addTextButton" value="Add text">
+        </div>
+    </form>
+    
+</body>
+</html>
